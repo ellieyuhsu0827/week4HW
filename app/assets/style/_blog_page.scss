@@ -1,0 +1,260 @@
+.blogpage_navbar {
+    background-color: $secondary;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-right: 48px;
+                @include mobile(){
+                    margin-right: 24px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: $text-lg;
+                    &:hover{
+                        color: $primary;
+                    }
+                    @include pad() {
+                        font-size: $text-base;
+                    }
+                }
+            }
+        }
+        .blog_search_icon {
+            @include mobile() {
+                display: none;
+            }
+        }
+    }
+}
+.blogpage {
+    display: flex;
+    margin-top: 78px;
+    margin-bottom: 160px;
+    @include pad() {
+        margin-top: 8px;
+        margin-bottom: 96px;
+    }
+    @include mobile(){
+        flex-direction: column;
+        margin-bottom: 56px;
+    }
+    .blogpage_main {
+        width: 74%;
+        @include mobile(){
+            width: 100%;
+        }
+        .subnav {
+            display: flex;
+            a {
+                display: inline-block;
+                color: $black;
+                &:hover {
+                    color: $primary;
+                }
+                @include pad() {
+                    font-size: $text-sm;
+                }
+            }
+        }
+        .blogpage_tags {
+            display: flex;
+            a {
+                font-size: $text-2xl;
+                color: $primary;
+                font-weight: bold;
+                margin-right: 16px;
+                &:hover {
+                    color: $secondary;
+                }
+                @include pad() {
+                    font-size: $text-base;
+                }
+                @include mobile(){
+                    font-size: $text-sm;
+                }
+            }
+        }
+        .blogpage_headline {
+            font-size: $text-5xl;
+            margin-bottom: 8px;
+            @include pad() {
+                font-size: $text-3xl;
+                margin-bottom: 0px;
+            }
+            @include mobile(){
+                font-size: $text-lg;
+                color: $secondary;
+            
+            }
+        }
+        .subheading {
+            .blogpage_subtitle {
+                font-size: $text-2xl;
+                @include pad() {
+                    font-size: $text-base;
+                }
+                @include mobile(){
+                    font-size:  $text-sm;
+                }
+            }
+            .blog_date {
+                color: $gray;
+                @include pad() {
+                    font-size: $text-sm;
+                }
+            }
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .blogpage_content {
+            img {
+                width: 100%;
+                margin-bottom: 24px;
+                @include pad() {
+                    margin-bottom: 16px;
+                }
+            }
+            p {
+                font-size: $text-lg;
+                color: $gray;
+                margin-bottom: 40px;
+                @include pad() {
+                    font-size: $text-base;
+                    margin-bottom: 24px;
+                    &:last-child {
+                        margin-bottom: 28px;
+                    }
+                }
+                @include mobile(){
+                    &:last-child {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .share_bar {
+            display: flex;
+            border-bottom: 1px solid #000;
+            margin-bottom: 24px;
+            @include pad() {
+                margin-bottom: 16px;
+            }
+            a {
+                color: $black;
+                font-weight: bold;
+                margin-right: 20px;
+                padding-bottom: 20px;
+                font-size: $text-lg;
+                &:hover {
+                    color: $secondary;
+                }
+                @include pad() {
+                    padding-bottom: 16px;
+                    font-size: $text-base;
+                }
+                @include mobile(){
+                    margin-right: 16px;
+                    padding-bottom: 16px;
+                    img{
+                        width: 20px;
+                    }
+                }
+                
+            }
+        }
+        .content_list {
+            display: flex;
+            justify-content: space-between;
+            img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            a {
+                color: $black;
+                font-size: $text-lg;
+                &:hover {
+                    color: $primary;
+                }
+                @include pad() {
+                    font-size: $text-base;
+                }
+            }
+            .prearrow {
+                transform: rotate(180deg);
+            }
+            .next a{
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            @include mobile(){
+                flex-direction: column;
+                margin-bottom: 30px;
+                .next a{
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+    .sidebar {
+        width: 26%;
+        font-weight: bold;
+        padding-left: 30px;
+        @include pad() {
+            padding-top: 57px;
+        }
+        @include mobile(){
+            width: 100%;
+            padding: 0px;
+        }
+
+        .tag_title {
+            font-size: $text-2xl;
+            color: $primary;
+            @include pad() {
+                font-size: $text-lg;
+            }
+            img {
+                display: inline;
+                vertical-align: middle;
+                @include pad() {
+                    height: 20px;
+                }
+            }
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            a {
+                font-size: $text-xl;
+                color: $primary;
+                margin-right: 24px;
+                margin-bottom: 8px;
+                &:hover {
+                    color: $secondary;
+                }
+                @include pad() {
+                    font-size: $text-base;
+                    margin-right: 16px;
+                    margin-bottom: 0;
+                }
+                @include mobile(){
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}

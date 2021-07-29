@@ -1,0 +1,206 @@
+.blog_navbar {
+    background-color: $secondary;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    @include mobile(){
+        display: none;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-right: 48px;
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size:  $text-lg ;
+                    @include pad(){
+                        font-size: $text-base;
+                    }
+                }
+            }
+        }
+    }
+}
+.blog_headline {
+    font-size: $text-5xl;
+    border-left: 8px solid $primary;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    padding-left: 16px;
+    @include mobile(){
+        font-size: $text-2xl;
+        border-left: 4px solid $primary;
+        margin-top: 28px;
+        margin-bottom: 28px;
+        padding-left: 8px;
+    }
+}
+.blog_content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @include pad(){
+        margin-bottom: 24px;
+    }
+    @include mobile(){
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .blog_pic {
+        width: 57%;
+        img {
+            width: 100%;
+        }
+        @include pad(){
+            width: 50%;
+        }
+        @include mobile(){
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+    .blog_text {
+        width: 43%;
+        margin-left: 30px;
+        position: relative;
+        @include pad(){
+            width: 50%;
+        }
+        @include mobile(){
+            width: 100%;
+            margin-left: 0px;
+        }
+        .blog_title {
+            font-size: $text-3xl;
+            line-height: 1.5;
+            color: $secondary;
+            @include pad(){
+                font-size: $text-lg;
+            }
+            @include mobile(){
+                font-size: $text-base;
+                line-height: 1.5;
+            }
+        }
+        .blog_subtitle {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            @include pad(){
+                margin-bottom: 32px;
+            }
+            @include mobile(){
+                margin-bottom: 0px;
+            }
+            h3 {
+                font-size: $text-lg;
+                line-height: 1.5;
+                vertical-align: middle;
+                @include pad(){
+                    font-size: $text-base;
+                }
+                @include mobile(){
+                    font-size: $text-sm;
+                    line-height: 1.5;
+                    vertical-align: middle;
+                }
+            }
+            .blog_date {
+                font-size: $text-base;
+                color: $lightgray;
+                line-height: 28.5px;
+                text-align: center;
+                @include pad(){
+                    font-size: $text-sm;
+                }
+                @include mobile(){
+                    font-size: $text-sm;
+                    line-height: 1.5;
+                    color: $black;
+                }
+            }
+        }
+        .blog_article {
+            font-size: $text-lg;
+            line-height: 1.5;
+            text-align: justify;
+            color: $gray;
+            @include pad(){
+                font-size: $text-sm;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            @include mobile(){
+                display: none;
+            }
+        }
+        .more_btn {
+            text-decoration: none;
+            font-size: $text-4xl;
+            line-height: 1.5;
+            font-weight: bold;
+            color: $secondary;
+            text-transform: uppercase;
+            text-align: right;
+            display: block;
+            margin-top: 14px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            &:hover {
+                color: $primary;
+            }
+            @include pad(){
+                font-size: $text-sm;
+                color: $black;
+                text-transform: lowercase;
+            }
+            @include mobile(){
+                display: none;
+            }
+        }
+    }
+}
+.next_page {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 160px;
+    li {
+        border: solid 1px $gray;
+        a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.5;
+            color: $gray;
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+            @include mobile(){
+                padding: 12px 15px;
+            }
+        }
+        &:nth-child(n + 1):nth-child(-n + 6) {
+            border-right: 0px;
+        }
+    }
+    @include pad(){
+        margin-bottom: 96px;
+        margin-top: 64px;
+    }
+    @include mobile(){
+        margin-bottom: 56px;
+        margin-top: 40px;
+    }
+}

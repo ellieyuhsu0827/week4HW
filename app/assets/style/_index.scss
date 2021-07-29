@@ -1,0 +1,481 @@
+/* banner----------------------- */
+.banner {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png);
+    height: 840px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.slogan {
+    text-align: right;
+    color: #650300;
+    line-height: 1.5;
+}
+
+.slogan_headtitle {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.slogan_subtitle {
+    font-size: 36px;
+}
+@media (max-width: 768px) {
+    .slogan_headtitle {
+        font-size: 48px;
+        font-weight: bold;
+    }
+    .slogan_subtitle {
+        font-size: 20px;
+    }
+}
+@media (max-width: 375px) {
+    .banner {
+        height: 394px;
+    }
+    .slogan_headtitle {
+        font-size: 32px;
+    }
+}
+/* feature----------------------- */
+
+.feature {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.feature .title {
+    color: #650300;
+}
+
+.special {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 48px;
+}
+
+.special li {
+    width: 255px;
+    padding: 0 15px;
+
+    .glass {
+        height: 94px;
+        display: flex;
+        align-items: flex-end;
+    }
+    h4 {
+        margin-top: 24px;
+    }
+}
+
+.special :first-child {
+    padding-left: 0;
+}
+
+.special :last-child {
+    padding-right: 0;
+}
+
+.special img {
+    margin: 0 auto;
+}
+
+.special h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 8px;
+}
+
+.special p {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .feature {
+        padding-top: 40px;
+        padding-bottom: 12px;
+    }
+    .special {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .special li {
+        padding: 0;
+        margin-bottom: 44px;
+    }
+}
+
+/* collection----------------------- */
+
+.collection {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.collection .title {
+    color: #650300;
+}
+
+.collection ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.collection p {
+    font-size: 48px;
+    color: #aa0601;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline;
+}
+
+.product {
+    width: 57%;
+}
+
+.collection li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.collection img {
+    display: inline;
+}
+
+.optical,
+.functional {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.sunglasses {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    .collection {
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+    .flex-reverse {
+        flex-direction: row;
+    }
+    .collection p {
+        font-size: 28px;
+    }
+    .collection ul {
+        padding-top: 32px;
+    }
+    .collection li {
+        margin-bottom: 8px;
+    }
+    .sunglasses {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .collection {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .collection ul {
+        padding-top: 20px;
+    }
+    .collection li {
+        position: relative;
+    }
+    .optical,
+    .sunglasses,
+    .functional {
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        margin: 0;
+    }
+    .product {
+        width: 100%;
+    }
+}
+
+/* designer------------------------- */
+
+.designer {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.designer {
+    .title {
+        color: white;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    li {
+        width: 50%;
+    }
+    a {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        font-size: 72px;
+        color: #aa0601;
+        font-weight: bold;
+        line-height: 455px;
+    }
+}
+
+.double {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-8.png);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: screen;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.double a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.youth {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-9.png);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: screen;
+    background-size: cover;
+    margin-left: 15px;
+}
+
+.youth a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .designer {
+        padding-top: 40px;
+        padding-bottom: 56px;
+        ul {
+            margin-top: 32px;
+        }
+        li {
+            width: 330px;
+            height: 278px;
+        }
+        a {
+            font-size: 32px;
+            line-height: 278px;
+        }
+        .youth{
+            margin-left: 0px;
+        }
+        .double {
+            margin-right: 0px;
+        }
+
+    }
+}
+
+@media (max-width: 375px) {
+    .designer {
+        padding-top: 32px;
+        padding-bottom: 40px;
+    }
+    .designer ul {
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .designer li {
+        width: 100%;
+        height: 100%;
+    }
+    .designer a {
+        line-height: 291px;
+    }
+    .double {
+        margin-bottom: 16px;
+    }
+}
+
+/* recommend-------------------------------- */
+
+.recommend {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.recommend .title {
+    color: #650300;
+}
+
+.recommend img {
+    width: 100%;
+}
+
+.recommend ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.recommend li:last-child {
+    margin-right: 0;
+}
+
+.recommend li {
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 25%;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.content {
+    padding: 16px;
+    color: black;
+    height: 204px;
+    position: relative;
+}
+
+.date {
+    position: absolute;
+    bottom: 16px;
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    .recommend {
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    .recommend ul {
+        flex-wrap: wrap;
+        margin-top: 32px;
+    }
+    .recommend li {
+        width: 330px;
+        margin: 0;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 375px) {
+    .recommend {
+        padding-bottom: 8px;
+    }
+    .recommend ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .recommend li {
+        width: 100%;
+    }
+}
+
+/* contactform-------------------------------- */
+
+.contactform {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.container .title {
+    margin-bottom: 24px;
+}
+
+.contactform .container {
+    max-width: 730px;
+}
+
+.contactform p {
+    color: black;
+    font-size: 20px;
+}
+
+.contact-group {
+    margin-top: 20px;
+    label {
+        color: black;
+    }
+    input,
+    textarea {
+        background: transparent;
+    }
+    .border {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+.opinion {
+    vertical-align: top;
+}
+
+.opinion-border {
+    height: 136px;
+    resize: none;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-privacy {
+    margin-bottom: 40px;
+}
+
+.button {
+    background-color: #aa0601;
+    border: 0;
+    color: white;
+    font-size: 16px;
+    width: 350px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+
+.button-group :hover {
+    background-color: #650300;
+}
+
+@media (max-width: 768px) {
+    .contactform {
+        padding-top: 40px;
+        padding-bottom: 56px;
+    }
+}

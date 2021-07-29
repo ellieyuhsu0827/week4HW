@@ -1,0 +1,246 @@
+.title {
+    text-align: center;
+    font-size: $text-5xl;
+    font-weight: bold;
+    @include pad() {
+        font-size: $text-3xl;
+    }
+    @include mobile() {
+        font-size: $text-xl;
+    }
+}
+
+/* header----------------------- */
+
+.navbar {
+    padding: 30px 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include pad() {
+        padding: 30px;
+    }
+    @include mobile() {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.nav_logo {
+    width: 80px;
+    height: 48.57px;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    a {
+        display: block;
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    @include mobile() {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 48px;
+        height: 29.14px;
+    }
+}
+
+.nav_button {
+    display: flex;
+    justify-content: space-between;
+    @include mobile() {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 1px solid #fff;
+    }
+}
+
+.nav_button a {
+    margin-left: 64px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    @include pad() {
+        margin-left: 40px;
+    }
+    @include mobile() {
+        margin-bottom: 10px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .nav_logo img {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .nav_button li {
+        width: 50%;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .series,
+    .store {
+        border-bottom: 1px solid #fff;
+    }
+    .series,
+    .blog {
+        border-right: 1px solid #fff;
+    }
+}
+
+/* footer---------------------------- */
+
+.footer {
+    padding-top: 32px;
+    padding-bottom: 40px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.footer-menu .cotact {
+    display: flex;
+    align-items: center;
+}
+
+.footer-menu .cotact li {
+    margin-right: 48px;
+}
+
+.footer-menu .cotact a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.footer-icon li {
+    margin-left: 32px;
+}
+
+.tel,
+.mail {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+}
+
+.footercontact-info {
+    a{
+        display: flex;
+        align-items: center;
+    }
+    img {
+    margin-right: 20px;
+    display: inline;}
+}
+
+.copyright {
+    margin-top: 24px;
+    border-top: 1px solid #fff;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright p {
+    color: white;
+    font-size: 16px;
+}
+
+.copyright-link {
+    display: flex;
+}
+
+.copyright-link li {
+    margin-left: 48px;
+}
+
+.copyright-link a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-menu .cotact li {
+        margin-right: 40px;
+    }
+    .footer-icon li {
+        width: 24px;
+        height: 24px;
+        margin-left: 24px;
+    }
+    .footer-icon img {
+        width: 100%;
+    }
+    .copyright-link li {
+        margin-left: 24px;
+    }
+    .tel,
+    .mail {
+        font-size: 20px;
+    }
+    .footercontact-info img {
+        width: 20px;
+        margin-right: 10px;
+    }
+    .copyright-link a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer {
+        position: relative;
+        padding-bottom: 16px;
+        padding-top: 24px;
+    }
+    .footer-menu {
+        position: absolute;
+        z-index: 5;
+        top: 24px;
+        left: 216px;
+    }
+    .footer-menu .cotact {
+        display: none;
+    }
+    .footer-menu {
+        justify-content: flex-end;
+    }
+    .tel,
+    .mail {
+        font-size: 16px;
+    }
+    .copyright {
+        font-size: 14px;
+        display: block;
+        margin-top: 24px;
+        padding-top: 16px;
+    }
+    .copyright-link {
+        display: block;
+    }
+    .copyright p {
+        margin-bottom: 8px;
+    }
+    .copyright-link li {
+        margin-left: 0px;
+        margin-bottom: 8px;
+    }
+}

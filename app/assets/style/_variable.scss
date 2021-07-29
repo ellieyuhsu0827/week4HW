@@ -1,0 +1,31 @@
+
+// Font Size
+$font-size-base:16px;
+
+// px14
+$text-sm : $font-size-base * 0.875; 
+// px16
+$text-base : $font-size-base ;
+// px18
+$text-l : $font-size-base * 1.125 ;
+// px20
+$text-lg : $font-size-base * 1.25 ;
+// px24
+$text-xl : $font-size-base * 1.5 ;
+// px28
+$text-2xl : $font-size-base * 1.75 ;
+// px32
+$text-3xl : $font-size-base * 2 ;
+// px36
+$text-4xl : $font-size-base * 2.25 ;
+// px48
+$text-5xl : $font-size-base * 3 ;
+
+// Color system
+$black: #000000; 
+$white: #FFFFFF;
+$lightgray:#808080;
+$gray:#555555;
+$primary: #AA0601;
+$secondary: #650300;
+$light:#AA06010D;

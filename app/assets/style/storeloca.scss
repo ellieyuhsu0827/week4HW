@@ -1,0 +1,85 @@
+.storeloca_city {
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile(){
+        flex-direction: column;
+        }
+    .store_card {
+        width: 31.5%;
+        margin-bottom: 32px;
+        &:not(:nth-child(3n)) {
+            margin-right: calc(5.5% / 2);
+        }
+        @include pad(){
+            width: 47%;
+            margin-bottom: 20px;
+            &:not(:nth-child(3n)) {
+                margin-right:auto;
+            }
+            &:nth-child(3n) {
+                margin-right:auto;
+            }
+            &:nth-child(2n) {
+                margin-right: 0px;
+            }
+            
+        }
+        @include mobile(){
+            width: 100%;
+            }
+        .storename {
+            font-size: $text-xl;
+            padding: 12px 24px;
+            border: solid 1px #00000020;
+            @include pad() {
+                font-size: $text-base;
+            }
+        }
+        ul {
+            padding: 16px 24px;
+            border-bottom: solid 1px #00000020;
+            border-right: solid 1px #00000020;
+            border-left: solid 1px #00000020;
+            li {
+                display: flex;
+                align-items: center;
+                font-size: $text-lg;
+                margin-bottom: 14px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                img {
+                    display: inline-block;
+                    margin-right: 11px;
+                    @include pad() {
+                        width: 20px;
+                    }
+                }
+                @include pad() {
+                    font-size: $text-sm;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        
+        .store_detail {
+            background-color: $black;
+            &:hover {
+                background-color: $secondary;
+            }
+            a {
+                color: $white;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: $text-lg;
+                @include mobile(){
+                    font-size: $text-sm ;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                    }
+            }
+        }
+    }
+
+}

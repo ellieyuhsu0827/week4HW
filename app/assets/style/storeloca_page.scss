@@ -1,0 +1,113 @@
+.storeloca {
+    margin-bottom: 160px;
+    @include pad(){
+        margin-bottom: 96px;
+    }
+    @include mobile(){
+        margin-bottom: 56px;
+    }
+}
+.store_selectbar {
+    display: flex;
+    .storeloca_title {
+        font-size: $text-xl;
+        padding-right: 22px;
+        
+        @include mobile(){
+            font-size: $text-sm;
+            padding-right: 12px;
+            line-height: 36px;
+        }
+    }
+    .select {
+        height: 46px;
+        width: 324px;
+        @include mobile(){
+            width: 277px;
+            height: 36px;
+        }
+    }
+    margin-bottom: 24px;
+}
+
+.store_content {
+    display: flex;
+    @include pad() {
+        flex-direction: column;
+    }
+
+    .store_card {
+        width: 43%;
+        .storename {
+            font-size: $text-xl;
+            padding: 12px 24px;
+            border: solid 1px #00000020;
+            @include pad() {
+                font-size: $text-base;
+            }
+        }
+        ul {
+            padding: 16px 24px;
+            border-bottom: solid 1px #00000020;
+            border-right: solid 1px #00000020;
+            border-left: solid 1px #00000020;
+            li {
+                font-size: $text-lg;
+                margin-bottom: 14px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                img {
+                    display: inline-block;
+                    margin-right: 11px;
+                    @include pad() {
+                        width: 20px;
+                    }
+                }
+                @include pad() {
+                    font-size: $text-sm;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        @include pad() {
+            height: 176px;
+            display: flex;
+            width: 100%;
+            .store_pic {
+                overflow: hidden;
+                width: 50%;
+                margin-right: 30px;
+            }
+            .store_info {
+                width: 50%;
+            }
+        }
+        @include mobile(){
+            height: 100%;
+            flex-direction: column;
+            .store_pic {
+                overflow: visible;
+                width: 100%;
+                margin-right: 30px;
+            }
+            .store_info {
+                width: 100%;
+            }
+        }
+    }
+    .store_map {
+        width: 57%;
+        padding-left: 30px;
+        @include pad(){
+            padding: 0;
+            width: 100%;
+            margin-top: 32px;
+            height: 442px;
+        }
+        @include mobile(){
+            height: 211px;
+            margin-top: 16px;
+        }
+    }
+}
